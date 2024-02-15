@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmf86jb278nla"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_iynr0"]
+[ext_resource type="Texture2D" uid="uid://dyowum81pgs1c" path="res://Imports/TinyRanch_Characters.png" id="1_w78h2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ih1tb"]
+size = Vector2(8.66667, 8.66667)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41kjn"]
+atlas = ExtResource("1_w78h2")
+region = Rect2(8, 0, 8, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l866c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41kjn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(2.5, 2.5)
+collision_mask = 2
+script = ExtResource("1_iynr0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ih1tb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_l866c")
