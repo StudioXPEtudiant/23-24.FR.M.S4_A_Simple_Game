@@ -1,12 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmf86jb278nla"]
+[gd_scene load_steps=7 format=3 uid="uid://cmf86jb278nla"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_iynr0"]
 [ext_resource type="Texture2D" uid="uid://dyowum81pgs1c" path="res://Imports/TinyRanch_Characters.png" id="1_w78h2"]
-[ext_resource type="Texture2D" path="res://Imports/MiniPersoDeTest.png" id="3_ythve"]
-[ext_resource type="Texture2D" uid="uid://meor5yiepy8c" path="res://Imports/light.png" id="4_cbwqj"]
+[ext_resource type="Texture2D" uid="uid://cdupva2lwtt0o" path="res://Imports/MiniPersoDeTest.png" id="3_1slrq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ih1tb"]
-size = Vector2(13.8571, 11.5714)
+size = Vector2(7.14286, 8.28572)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_41kjn"]
 atlas = ExtResource("1_w78h2")
@@ -30,8 +29,7 @@ motion_mode = 1
 script = ExtResource("1_iynr0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -0.785714)
-scale = Vector2(1, 1)
+position = Vector2(1.02179e-07, 2.21389e-07)
 shape = SubResource("RectangleShape2D_ih1tb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -51,10 +49,4 @@ drag_vertical_enabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
-texture = ExtResource("3_ythve")
-
-[node name="PointLight2D" type="PointLight2D" parent="."]
-scale = Vector2(0.307043, 0.2819)
-energy = 200.0
-shadow_enabled = true
-texture = ExtResource("4_cbwqj")
+texture = ExtResource("3_1slrq")
