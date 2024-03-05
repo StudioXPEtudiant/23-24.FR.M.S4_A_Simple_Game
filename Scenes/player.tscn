@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cmf86jb278nla"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_iynr0"]
-[ext_resource type="Texture2D" uid="uid://cdupva2lwtt0o" path="res://Imports/MiniPersoDeTest.png" id="3_1slrq"]
+[ext_resource type="Texture2D" uid="uid://cdupva2lwtt0o" path="res://Imports/Sprites/MiniPersoDeTest.png" id="3_1slrq"]
 [ext_resource type="Texture2D" uid="uid://meor5yiepy8c" path="res://Imports/light.png" id="4_ub0f1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ih1tb"]
@@ -31,7 +31,7 @@ drag_vertical_enabled = true
 texture_filter = 1
 texture = ExtResource("3_1slrq")
 
-[node name="PointLight2D" type="PointLight2D" parent="."]
+[node name="PlayerFlashlight" type="PointLight2D" parent="."]
 texture_filter = 1
 shadow_enabled = true
 shadow_filter = 2
