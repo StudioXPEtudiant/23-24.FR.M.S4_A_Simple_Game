@@ -639,5 +639,4 @@ position = Vector2(1014, 323)
 scale = Vector2(0.04, 0.04)
 
 [node name="O_Key" type="Sprite2D" parent="Area2D"]
-scale = Vector2(1, 1)
 texture = ExtResource("5_nlhwb")
