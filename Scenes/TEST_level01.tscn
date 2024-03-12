@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/TEST_level01.gd" id="1_wldnw"]
 [ext_resource type="Texture2D" uid="uid://cp0aioukloj1b" path="res://TilePalette/CosmicLilac_Tiles.png" id="2_082fy"]
 [ext_resource type="PackedScene" uid="uid://cmf86jb278nla" path="res://Scenes/player.tscn" id="3_vdfq7"]
-[ext_resource type="Script" path="res://Scenes/CanvasModulate.gd" id="4_jxuxx"]
+[ext_resource type="Script" path="res://Scripts/CanvasModulate.gd" id="4_jxuxx"]
 [ext_resource type="Texture2D" uid="uid://csa3xgygdow0w" path="res://Imports/Sprites/O_key.png" id="5_nlhwb"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_87emr"]

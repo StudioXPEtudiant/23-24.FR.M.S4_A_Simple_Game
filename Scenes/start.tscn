@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dpapysvarucu0"]
 
 [ext_resource type="FontFile" uid="uid://dwtniqvivhe7u" path="res://Imports/Fonts/Kenney Rocket.ttf" id="1_c8b1b"]
-[ext_resource type="Script" path="res://Scenes/start.gd" id="1_oof7r"]
+[ext_resource type="Script" path="res://Scripts/start.gd" id="1_oof7r"]
 
 [node name="Start" type="Control"]
 layout_mode = 3
