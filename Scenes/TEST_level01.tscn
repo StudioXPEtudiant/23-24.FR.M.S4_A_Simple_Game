@@ -631,10 +631,11 @@ format = 2
 layer_0/tile_data = PackedInt32Array(1048624, 786432, 1, 1114160, 786432, 2, 1048625, 786432, 1, 1114161, 786432, 2, 1048626, 786432, 1, 1114162, 786432, 2)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("3_vdfq7")]
-position = Vector2(978, 341)
+position = Vector2(744, 314)
 scale = Vector2(1, 1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0.00392157, 0.00392157, 0.00392157, 1)
 script = ExtResource("4_jxuxx")
 
