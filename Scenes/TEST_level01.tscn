@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/TEST_level01.gd" id="1_wldnw"]
 [ext_resource type="Texture2D" uid="uid://cp0aioukloj1b" path="res://TilePalette/CosmicLilac_Tiles.png" id="2_082fy"]
 [ext_resource type="PackedScene" uid="uid://cmf86jb278nla" path="res://Scenes/player.tscn" id="3_vdfq7"]
-[ext_resource type="Script" path="res://Scripts/CanvasModulate.gd" id="4_18slp"]
+[ext_resource type="Script" path="res://Scripts/CanvasModulate.gd" id="4_jxuxx"]
 [ext_resource type="Texture2D" uid="uid://csa3xgygdow0w" path="res://Imports/Sprites/O_key.png" id="5_nlhwb"]
 [ext_resource type="Script" path="res://Scripts/Area2D.gd" id="5_v1o5v"]
 [ext_resource type="PackedScene" uid="uid://cnqyk7ykd7g7x" path="res://Scenes/Particles/blue_sphere_explo_particles.tscn" id="7_kjhcx"]
@@ -635,9 +635,8 @@ position = Vector2(978, 341)
 scale = Vector2(1, 1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0.00392157, 0.00392157, 0.00392157, 1)
-script = ExtResource("4_18slp")
+script = ExtResource("4_jxuxx")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1014, 323)
