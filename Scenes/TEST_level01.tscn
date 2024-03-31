@@ -3,15 +3,8 @@
 [ext_resource type="Script" path="res://Scripts/TEST_level01.gd" id="1_wldnw"]
 [ext_resource type="Texture2D" uid="uid://cp0aioukloj1b" path="res://TilePalette/CosmicLilac_Tiles.png" id="2_082fy"]
 [ext_resource type="PackedScene" uid="uid://cmf86jb278nla" path="res://Scenes/player.tscn" id="3_vdfq7"]
-<<<<<<< HEAD
 [ext_resource type="Script" path="res://Scripts/CanvasModulate.gd" id="4_jxuxx"]
 [ext_resource type="PackedScene" uid="uid://uwt4dpa50plf" path="res://Scenes/collectables/key.tscn" id="5_q36mj"]
-=======
-[ext_resource type="Script" path="res://Scripts/CanvasModulate.gd" id="4_18slp"]
-[ext_resource type="Texture2D" uid="uid://csa3xgygdow0w" path="res://Imports/Sprites/O_key.png" id="5_nlhwb"]
-[ext_resource type="Script" path="res://Scripts/Area2D.gd" id="5_v1o5v"]
-[ext_resource type="PackedScene" uid="uid://cnqyk7ykd7g7x" path="res://Scenes/Particles/blue_sphere_explo_particles.tscn" id="7_kjhcx"]
->>>>>>> 882c0b4b679ec9e6b182c0291bd7ec20a562e343
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_87emr"]
 polygon = PackedVector2Array(-6.75, -1.25, 6.625, -1.375, 6.875, 2.25, 5.75, 2.625, 6, 5.75, -5.875, 5.75, -5.625, 3.25, -6.75, 2.25)
@@ -633,16 +626,12 @@ format = 2
 layer_0/tile_data = PackedInt32Array(1048624, 786432, 1, 1114160, 786432, 2, 1048625, 786432, 1, 1114161, 786432, 2, 1048626, 786432, 1, 1114162, 786432, 2)
 
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("3_vdfq7")]
-<<<<<<< HEAD
 position = Vector2(975, 350)
-=======
-position = Vector2(978, 341)
->>>>>>> 882c0b4b679ec9e6b182c0291bd7ec20a562e343
 scale = Vector2(1, 1)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 visible = false
 color = Color(0.00392157, 0.00392157, 0.00392157, 1)
-script = ExtResource("4_18slp")
+script = ExtResource("4_jxuxx")
 
 [node name="Key" parent="." instance=ExtResource("5_q36mj")]
