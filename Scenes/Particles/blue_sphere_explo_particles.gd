@@ -1,10 +1,7 @@
 extends AnimatedSprite2D
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	play()
+	play("default")
 
-func _on_animation_finished():
+func _on_animation_looped():
 	queue_free()
-	stop()

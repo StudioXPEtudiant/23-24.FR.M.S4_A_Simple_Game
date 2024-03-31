@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://uwt4dpa50plf"]
+
+[ext_resource type="Script" path="res://Scripts/Area2D.gd" id="1_raovb"]
+[ext_resource type="PackedScene" uid="uid://cnqyk7ykd7g7x" path="res://Scenes/Particles/blue_sphere_explo_particles.tscn" id="2_ellmk"]
+[ext_resource type="Texture2D" uid="uid://csa3xgygdow0w" path="res://Imports/Sprites/O_key.png" id="3_t8a4n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0gac1"]
+size = Vector2(375, 350)
+
+[node name="Key" type="Area2D"]
+position = Vector2(1014, 323)
+scale = Vector2(0.04, 0.04)
+script = ExtResource("1_raovb")
+pick_up_animation_scene = ExtResource("2_ellmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-12.5, 0)
+shape = SubResource("RectangleShape2D_0gac1")
+
+[node name="O_Key" type="Sprite2D" parent="."]
+texture = ExtResource("3_t8a4n")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
