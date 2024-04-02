@@ -1,0 +1,84 @@
+[gd_scene load_steps=13 format=3 uid="uid://bi2q74u8eiw6c"]
+
+[ext_resource type="Texture2D" uid="uid://dav3mh6y833m2" path="res://Imports/Sprites/Particules/explo_particles_full.png" id="1_hbfkc"]
+[ext_resource type="Script" path="res://Scenes/Particles/circle_orange_animation.gd" id="2_86vwc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvxto"]
+atlas = ExtResource("1_hbfkc")
+region = Rect2(512, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tw2ym"]
+atlas = ExtResource("1_hbfkc")
+region = Rect2(448, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agu6u"]
+atlas = ExtResource("1_hbfkc")
+region = Rect2(384, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fo4nj"]
+atlas = ExtResource("1_hbfkc")
+region = Rect2(320, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjwsr"]
+atlas = ExtResource("1_hbfkc")
+region = Rect2(256, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_27lju"]
+atlas = ExtResource("1_hbfkc")
+region = Rect2(192, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1p27"]
+atlas = ExtResource("1_hbfkc")
+region = Rect2(128, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5sah"]
+atlas = ExtResource("1_hbfkc")
+region = Rect2(64, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pp7e2"]
+atlas = ExtResource("1_hbfkc")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6vtff"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvxto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tw2ym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agu6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fo4nj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjwsr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_27lju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1p27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5sah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pp7e2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="circle_orange_animation" type="AnimatedSprite2D"]
+texture_filter = 1
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_6vtff")
+frame_progress = 0.370465
+script = ExtResource("2_86vwc")
+
+[connection signal="animation_looped" from="." to="." method="_on_animation_looped"]

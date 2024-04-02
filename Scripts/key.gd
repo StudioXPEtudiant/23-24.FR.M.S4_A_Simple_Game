@@ -8,6 +8,7 @@ extends Area2D
 func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.get_name() == "Player":
 		do_pick_up_animation()
+		give_key_to_player()
 		queue_free()
 
 func do_pick_up_animation():
@@ -19,7 +20,5 @@ func do_pick_up_animation():
 
 func give_key_to_player():
 	if(key_number == 1):
-		get_parent().get_script().l1_key_1 = true
-
-func change_inventory_of_scene():
-	pass
+		var scene = get_parent()
+		scene.change_inventory_of_scene(1)
