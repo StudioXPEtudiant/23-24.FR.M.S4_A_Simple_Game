@@ -5,9 +5,6 @@ extends Area2D
 
 @export var key_number = 1
 
-func _process(delta):
-	pass
-
 func _on_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.get_name() == "Player":
 		do_pick_up_animation()
@@ -19,6 +16,10 @@ func do_pick_up_animation():
 	get_parent().add_child(pick_up_animation)
 	print("animation child added at ", position)
 	
+
 func give_key_to_player():
 	if(key_number == 1):
 		get_parent().get_script().l1_key_1 = true
+
+func change_inventory_of_scene():
+	pass

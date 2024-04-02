@@ -2,22 +2,17 @@ extends Node2D
 
 ################################### Keys vars ###################################
 
-# Level 1
-var l1_key_1 = false
-
-# Level 2
-
+var player_have_key_1 = false
 
 #################################################################################
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
+func change_key_inventory(key_number):
+	if(key_number == 1):
+		player_have_key_1 = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print(l1_key_1)
+	pass
 
 func _unhandled_input(event):
 	if event is InputEventKey:
