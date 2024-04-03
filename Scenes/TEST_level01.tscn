@@ -637,7 +637,6 @@ script = ExtResource("4_jxuxx")
 
 [node name="Key" parent="." instance=ExtResource("5_q36mj")]
 position = Vector2(1014, 324)
-key_number = 1
 
 [node name="Chest" parent="." instance=ExtResource("6_2uxxk")]
 position = Vector2(943, 337)
