@@ -6,12 +6,16 @@ var player_have_key_1 = false
 
 #################################################################################
 
-func change_key_inventory(key_number):
-	if(key_number == 1):
-		player_have_key_1 = true
+func _process(delta):
+	print(player_have_key_1)
 
 func _ready():
 	$CanvasModulate.switchLight()
+
+
+func add_key_inventory(key_number):
+	if(key_number == 1):
+		player_have_key_1 = true
 
 func _unhandled_input(event):
 	if event is InputEventKey:
@@ -19,13 +23,22 @@ func _unhandled_input(event):
 			$CanvasModulate.switchLight()
 
 func change_inventory_of_scene(key_number):
-	change_key_inventory(key_number)
+	add_key_inventory(key_number)
 
-func check_keys_in_inventory(slot_number):
-	if(slot_number == 1):
-		if(player_have_key_1):
-			return true
-	elif(slot_number == 2):
+func key_number_to_var(key_number):
+	if(key_number == 1):
+		return player_have_key_1
+	elif(key_number == 2):
 		pass
+
+func check_keys_in_inventory(key_number) -> bool:
+	if(key_number_to_var(key_number)):
+		return true
 	else:
 		return false
+
+func remove_key(key_number) -> void:
+	if key_number == 1:
+		player_have_key_1 = false
+
+
