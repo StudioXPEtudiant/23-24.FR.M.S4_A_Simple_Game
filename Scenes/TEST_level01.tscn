@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bqwce73l0l4m4"]
+[gd_scene load_steps=16 format=3 uid="uid://bqwce73l0l4m4"]
 
 [ext_resource type="Script" path="res://Scripts/TEST_level01.gd" id="1_wldnw"]
 [ext_resource type="Texture2D" uid="uid://cp0aioukloj1b" path="res://TilePalette/CosmicLilac_Tiles.png" id="2_082fy"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/CanvasModulate.gd" id="4_jxuxx"]
 [ext_resource type="PackedScene" uid="uid://uwt4dpa50plf" path="res://Scenes/collectables/key.tscn" id="5_q36mj"]
 [ext_resource type="PackedScene" uid="uid://cb7w8xlsmymva" path="res://Scenes/chest.tscn" id="6_2uxxk"]
+[ext_resource type="PackedScene" uid="uid://bp8b5813xtnmy" path="res://Scenes/lever.tscn" id="7_x0c51"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_87emr"]
 polygon = PackedVector2Array(-6.75, -1.25, 6.625, -1.375, 6.875, 2.25, 5.75, 2.625, 6, 5.75, -5.875, 5.75, -5.625, 3.25, -6.75, 2.25)
@@ -640,4 +641,6 @@ position = Vector2(1014, 324)
 
 [node name="Chest" parent="." instance=ExtResource("6_2uxxk")]
 position = Vector2(943, 337)
-metadata/_edit_group_ = true
+
+[node name="Lever" parent="." instance=ExtResource("7_x0c51")]
+position = Vector2(839, 371)
