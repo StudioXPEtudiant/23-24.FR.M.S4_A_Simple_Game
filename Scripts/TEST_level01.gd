@@ -6,12 +6,13 @@ var player_have_key_1 = false
 
 #################################################################################
 
+var flashlight_on = false
+
 func _process(delta):
 	print(player_have_key_1)
 
 func _ready():
 	$CanvasModulate.switchLight()
-
 
 func add_key_inventory(key_number):
 	if(key_number == 1):
@@ -21,6 +22,12 @@ func _unhandled_input(event):
 	if event is InputEventKey:
 		if event.pressed and event.keycode == KEY_L:
 			$CanvasModulate.switchLight()
+			if(flashlight_on):
+				$discord_manager.update_flashlight_state(false)
+				flashlight_on = false
+			elif(!flashlight_on):
+				$discord_manager.update_flashlight_state(true)
+				flashlight_on = true
 
 func change_inventory_of_scene(key_number):
 	add_key_inventory(key_number)

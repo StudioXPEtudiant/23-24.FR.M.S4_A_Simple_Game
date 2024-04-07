@@ -44,19 +44,18 @@ texture_rect = NodePath("TextureRect")
 e_key_texture = ExtResource("2_6t0tq")
 e_pressed_key_texture = ExtResource("3_5e1yy")
 after_open_animation_scene = ExtResource("2_y5kah")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_urrlg")
 animation = &"closed"
+frame_progress = 0.0896106
 
 [node name="PlayerDetector" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_3iis2")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 visible = false
-z_index = 100
 texture_filter = 1
 offset_left = -14.0
 offset_top = -44.0
