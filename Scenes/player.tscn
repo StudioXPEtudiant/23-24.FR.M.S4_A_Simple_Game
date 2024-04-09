@@ -1,7 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://cmf86jb278nla"]
+[gd_scene load_steps=31 format=3 uid="uid://cmf86jb278nla"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_iynr0"]
-[ext_resource type="Texture2D" uid="uid://didud2xx4gog7" path="res://icon.svg" id="2_en8wm"]
 [ext_resource type="Texture2D" uid="uid://cbikp2j13ewif" path="res://Imports/Sprites/player_sheet_up.png" id="3_14koi"]
 [ext_resource type="Texture2D" uid="uid://bwnwga5rdqbi7" path="res://Imports/Sprites/player_sheet_right.png" id="3_n0j00"]
 [ext_resource type="Texture2D" uid="uid://meor5yiepy8c" path="res://Imports/light.png" id="4_ub0f1"]
@@ -190,35 +189,13 @@ animations = [{
 "speed": 15.0
 }]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xop6"]
-bg_color = Color(0.94902, 0.286275, 0.266667, 1)
-border_width_left = 6
-border_width_top = 6
-border_width_right = 6
-border_width_bottom = 6
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 7
-corner_radius_top_right = 7
-corner_radius_bottom_right = 7
-corner_radius_bottom_left = 7
-shadow_color = Color(0.215686, 0.215686, 0.215686, 0.6)
-shadow_size = 15
-shadow_offset = Vector2(1, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8o5ur"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
 [node name="Player" type="CharacterBody2D"]
 z_index = 2
-position = Vector2(574, 345)
 scale = Vector2(7, 7)
 collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_iynr0")
+metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.142858, 0.0714292)
@@ -247,6 +224,7 @@ texture_filter = 1
 scale = Vector2(1.6, 1.6)
 sprite_frames = SubResource("SpriteFrames_0mq4f")
 animation = &"up"
+<<<<<<< Updated upstream
 
 [node name="PlayerInfoBox" type="Panel" parent="."]
 offset_left = -127.143
@@ -304,3 +282,5 @@ theme_override_font_sizes/font_size = 34
 text = "Artenis67"
 horizontal_alignment = 1
 vertical_alignment = 1
+=======
+>>>>>>> Stashed changes
