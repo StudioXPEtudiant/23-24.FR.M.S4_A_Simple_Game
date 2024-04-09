@@ -9,7 +9,7 @@ var player_have_key_1 = false
 var flashlight_on = false
 
 func _process(delta):
-	print(player_have_key_1)
+	pass
 
 func _ready():
 	$CanvasModulate.switchLight()

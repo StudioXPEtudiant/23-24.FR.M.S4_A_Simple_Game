@@ -1,6 +1,7 @@
-[gd_scene load_steps=31 format=3 uid="uid://cmf86jb278nla"]
+[gd_scene load_steps=34 format=3 uid="uid://cmf86jb278nla"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_iynr0"]
+[ext_resource type="Texture2D" uid="uid://didud2xx4gog7" path="res://icon.svg" id="2_en8wm"]
 [ext_resource type="Texture2D" uid="uid://cbikp2j13ewif" path="res://Imports/Sprites/player_sheet_up.png" id="3_14koi"]
 [ext_resource type="Texture2D" uid="uid://bwnwga5rdqbi7" path="res://Imports/Sprites/player_sheet_right.png" id="3_n0j00"]
 [ext_resource type="Texture2D" uid="uid://meor5yiepy8c" path="res://Imports/light.png" id="4_ub0f1"]
@@ -189,8 +190,31 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xop6"]
+bg_color = Color(0.94902, 0.286275, 0.266667, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+shadow_color = Color(0.215686, 0.215686, 0.215686, 0.6)
+shadow_size = 15
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8o5ur"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
 [node name="Player" type="CharacterBody2D"]
 z_index = 2
+position = Vector2(574, 345)
 scale = Vector2(7, 7)
 collision_mask = 2
 motion_mode = 1
@@ -223,3 +247,60 @@ texture_filter = 1
 scale = Vector2(1.6, 1.6)
 sprite_frames = SubResource("SpriteFrames_0mq4f")
 animation = &"up"
+
+[node name="PlayerInfoBox" type="Panel" parent="."]
+offset_left = -127.143
+offset_top = -70.1429
+offset_right = 215.857
+offset_bottom = 85.8573
+scale = Vector2(0.13, 0.13)
+theme_override_styles/panel = SubResource("StyleBoxFlat_5xop6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="PlayerInfoBox"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -64.0
+offset_right = 140.0
+offset_bottom = 67.0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8o5ur")
+metadata/_edit_use_anchors_ = true
+
+[node name="Avatar" type="TextureRect" parent="PlayerInfoBox/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.1099
+offset_top = -63.0164
+offset_right = 63.8901
+offset_bottom = 64.9836
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_en8wm")
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerUsername" type="Label" parent="PlayerInfoBox"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.1484
+offset_top = -57.1209
+offset_right = 157.852
+offset_bottom = -15.1209
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 34
+text = "Artenis67"
+horizontal_alignment = 1
+vertical_alignment = 1
