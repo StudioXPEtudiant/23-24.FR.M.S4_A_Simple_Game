@@ -270,7 +270,7 @@ grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8o5ur")
 metadata/_edit_use_anchors_ = true
 
-[node name="Avatar" type="TextureRect" parent="PlayerInfoBox/Panel"]
+[node name="PlayerAvatar" type="TextureRect" parent="PlayerInfoBox/Panel"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
