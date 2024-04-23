@@ -49,3 +49,7 @@ func remove_key(key_number) -> void:
 		player_have_key_1 = false
 
 
+
+
+func _on_lever_lever_activation():
+	print ("ok")

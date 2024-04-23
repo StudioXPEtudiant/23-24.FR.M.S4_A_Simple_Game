@@ -1,5 +1,7 @@
 extends Area2D
 
+signal lever_activation
+
 var player_can_interact = false
 
 func _ready():
@@ -11,6 +13,7 @@ func _unhandled_input(event):
 			if event is InputEventKey:
 				if event.pressed and event.keycode == KEY_E :
 					$AnimatedSprite2D.animation = "Activated"
+					lever_activation.emit()
 				
 		elif $AnimatedSprite2D.animation == "Activated":
 			if event is InputEventKey:

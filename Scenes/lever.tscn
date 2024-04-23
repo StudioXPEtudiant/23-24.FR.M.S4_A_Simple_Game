@@ -12,7 +12,7 @@ radius = 52.0096
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_gl2hm")
+"texture": ExtResource("2_bstsr")
 }],
 "loop": true,
 "name": &"Activated",
@@ -20,7 +20,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_bstsr")
+"texture": ExtResource("1_gl2hm")
 }],
 "loop": true,
 "name": &"Deactivated",
@@ -38,7 +38,7 @@ shape = SubResource("CircleShape2D_2r3yj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qjasu")
-animation = &"Activated"
+animation = &"Deactivated"
 
 [node name="E_key" type="TextureRect" parent="."]
 visible = false
