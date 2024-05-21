@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream:Scenes/Scene_IG/TEST_level01.tscn
 [gd_scene load_steps=19 format=3 uid="uid://bqwce73l0l4m4"]
+=======
+[gd_scene load_steps=18 format=3 uid="uid://bqwce73l0l4m4"]
+>>>>>>> Stashed changes:Scenes/TEST_level01.tscn
 
 [ext_resource type="Script" path="res://Scripts/TEST_level01.gd" id="1_wldnw"]
 [ext_resource type="Texture2D" uid="uid://cp0aioukloj1b" path="res://TilePalette/CosmicLilac_Tiles.png" id="2_082fy"]
@@ -9,7 +13,10 @@
 [ext_resource type="PackedScene" uid="uid://bp8b5813xtnmy" path="res://Scenes/Object/lever.tscn" id="7_x0c51"]
 [ext_resource type="Script" path="res://addons/discord_manager.gd" id="8_ecs24"]
 [ext_resource type="Script" path="res://Scripts/DysplayPseudo.gd" id="9_xp3q3"]
+<<<<<<< Updated upstream:Scenes/Scene_IG/TEST_level01.tscn
 [ext_resource type="PackedScene" uid="uid://bnnruy1omq3uk" path="res://Scenes/door.tscn" id="10_pdans"]
+=======
+>>>>>>> Stashed changes:Scenes/TEST_level01.tscn
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_87emr"]
 polygon = PackedVector2Array(-6.75, -1.25, 6.625, -1.375, 6.875, 2.25, 5.75, 2.625, 6, 5.75, -5.875, 5.75, -5.625, 3.25, -6.75, 2.25)
@@ -664,8 +671,11 @@ offset_bottom = 23.0
 text = "Pseudo"
 script = ExtResource("9_xp3q3")
 
+<<<<<<< Updated upstream:Scenes/Scene_IG/TEST_level01.tscn
 [node name="Door" parent="." instance=ExtResource("10_pdans")]
 z_index = 2
 position = Vector2(712, 274)
 
+=======
+>>>>>>> Stashed changes:Scenes/TEST_level01.tscn
 [connection signal="lever_activation" from="Lever" to="." method="_on_lever_lever_activation"]
