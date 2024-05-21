@@ -11,13 +11,15 @@ config_version=5
 [application]
 
 config/name="A Simple Game"
-run/main_scene="res://Scenes/start.tscn"
+run/main_scene="res://Scenes/Scene_IG/start.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 DiscordRPCLoader="*res://addons/discord-rpc-gd/nodes/discord_autoload.gd"
+PlayerInfoPanel="*res://Scripts/PlayerInfoPanel.gd"
+Start="*res://Scenes/start.tscn"
 
 [editor_plugins]
 

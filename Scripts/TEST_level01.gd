@@ -52,4 +52,4 @@ func remove_key(key_number) -> void:
 
 
 func _on_lever_lever_activation():
-	print ("ok")
+	pass

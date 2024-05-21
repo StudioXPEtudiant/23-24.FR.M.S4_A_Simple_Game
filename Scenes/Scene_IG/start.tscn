@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/start.gd" id="1_3d3si"]
 [ext_resource type="FontFile" uid="uid://dwtniqvivhe7u" path="res://Imports/Fonts/Kenney Rocket.ttf" id="1_c8b1b"]
+[ext_resource type="Script" path="res://Scripts/PlayerInfoPanel.gd" id="3_haeo7"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_kbpvu"]
 
@@ -77,6 +78,7 @@ offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
 placeholder_text = "Pseudo"
+script = ExtResource("3_haeo7")
 
 [connection signal="pressed" from="StartButton" to="." method="get_and_send_player_username"]
 [connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
