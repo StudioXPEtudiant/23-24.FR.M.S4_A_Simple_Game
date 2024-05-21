@@ -78,5 +78,5 @@ grow_horizontal = 2
 grow_vertical = 2
 placeholder_text = "Pseudo"
 
-[connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="StartButton" to="." method="get_and_send_player_username"]
+[connection signal="pressed" from="StartButton" to="." method="_on_button_pressed"]
