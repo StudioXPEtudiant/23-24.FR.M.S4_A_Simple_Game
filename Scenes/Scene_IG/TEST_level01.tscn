@@ -5,11 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://cmf86jb278nla" path="res://Scenes/player.tscn" id="3_vdfq7"]
 [ext_resource type="Script" path="res://Scripts/CanvasModulate.gd" id="4_jxuxx"]
 [ext_resource type="PackedScene" uid="uid://uwt4dpa50plf" path="res://Scenes/collectables/key.tscn" id="5_q36mj"]
-[ext_resource type="PackedScene" uid="uid://cb7w8xlsmymva" path="res://Scenes/chest.tscn" id="6_2uxxk"]
-[ext_resource type="PackedScene" uid="uid://bp8b5813xtnmy" path="res://Scenes/lever.tscn" id="7_x0c51"]
+[ext_resource type="PackedScene" uid="uid://cb7w8xlsmymva" path="res://Scenes/Object/chest.tscn" id="6_2uxxk"]
+[ext_resource type="PackedScene" uid="uid://bp8b5813xtnmy" path="res://Scenes/Object/lever.tscn" id="7_x0c51"]
 [ext_resource type="Script" path="res://addons/discord_manager.gd" id="8_ecs24"]
 [ext_resource type="Script" path="res://Scripts/DysplayPseudo.gd" id="9_xp3q3"]
-[ext_resource type="PackedScene" uid="uid://bnnruy1omq3uk" path="res://Scripts/door.tscn" id="10_pdans"]
+[ext_resource type="PackedScene" uid="uid://bnnruy1omq3uk" path="res://Scenes/door.tscn" id="10_pdans"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_87emr"]
 polygon = PackedVector2Array(-6.75, -1.25, 6.625, -1.375, 6.875, 2.25, 5.75, 2.625, 6, 5.75, -5.875, 5.75, -5.625, 3.25, -6.75, 2.25)
