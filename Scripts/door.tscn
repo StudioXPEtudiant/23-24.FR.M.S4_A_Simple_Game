@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://bnnruy1omq3uk"]
 
-[ext_resource type="Script" path="res://Door.gd" id="1_o3kha"]
-[ext_resource type="Texture2D" path="res://Imports/Sprites/Door locked.png" id="2_vvkke"]
-[ext_resource type="Texture2D" path="res://Imports/Sprites/Door unlock.png" id="3_7vwk2"]
-[ext_resource type="Texture2D" path="res://Imports/Sprites/Door half open.png" id="4_0otfp"]
-[ext_resource type="Texture2D" path="res://Imports/Sprites/Door open.png" id="5_h8ho8"]
+[ext_resource type="Script" path="res://Scripts/Door.gd" id="1_o3kha"]
+[ext_resource type="Texture2D" uid="uid://b6a54nepapm7j" path="res://Imports/Sprites/Door locked.png" id="2_vvkke"]
+[ext_resource type="Texture2D" uid="uid://dmbnr2ubakmjs" path="res://Imports/Sprites/Door unlock.png" id="3_7vwk2"]
+[ext_resource type="Texture2D" uid="uid://djwmyal6bmv6x" path="res://Imports/Sprites/Door half open.png" id="4_0otfp"]
+[ext_resource type="Texture2D" uid="uid://cehs8o1ev40cp" path="res://Imports/Sprites/Door open.png" id="5_h8ho8"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_eg5qy"]
 animations = [{

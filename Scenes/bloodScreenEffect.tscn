@@ -1,0 +1,116 @@
+[gd_scene load_steps=11 format=3 uid="uid://dn31gd3ahiux1"]
+
+[ext_resource type="Texture2D" uid="uid://bnw1qmr2h6f5m" path="res://Imports/UI_Icons/NEw pack blood/2/1_12.png" id="1_0s3vm"]
+[ext_resource type="Texture2D" uid="uid://c1nwxg33tfswc" path="res://Imports/UI_Icons/NEw pack blood/1/1_8.png" id="1_y5t3g"]
+[ext_resource type="Texture2D" uid="uid://pjuj8gk7akw6" path="res://Imports/UI_Icons/NEw pack blood/3/1_11.png" id="2_86x8x"]
+[ext_resource type="Texture2D" uid="uid://dxehltkc422pk" path="res://Imports/UI_Icons/NEw pack blood/4/1_4.png" id="3_nydxf"]
+[ext_resource type="Texture2D" uid="uid://cfsykhbbkckuj" path="res://Imports/UI_Icons/NEw pack blood/5/1_15.png" id="4_3w1ab"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w5b6r"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y5t3g")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j6u74"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_0s3vm")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gqmtw"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_86x8x")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kp7n5"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nydxf")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mfskh"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_3w1ab")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]
+
+[node name="BloodScreenEffect" type="Node2D"]
+texture_filter = 1
+scale = Vector2(6.17, 6.17)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(170.665, 23.987)
+sprite_frames = SubResource("SpriteFrames_w5b6r")
+animation = &"full"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(19.1248, 18.1523)
+sprite_frames = SubResource("SpriteFrames_j6u74")
+animation = &"full"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(177.31, 92.7066)
+sprite_frames = SubResource("SpriteFrames_gqmtw")
+animation = &"full"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+position = Vector2(9.23825, 105.024)
+sprite_frames = SubResource("SpriteFrames_kp7n5")
+animation = &"full"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
+position = Vector2(99.3517, 6.32091)
+sprite_frames = SubResource("SpriteFrames_mfskh")
+animation = &"full"

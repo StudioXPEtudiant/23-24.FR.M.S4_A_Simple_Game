@@ -10,6 +10,8 @@ var open_label_base_text = "E to open"
 var player_can_interact = false
 var is_open = false
 
+var player
+
 func _unhandled_input(event):
 	if(player_can_interact):
 		if event is InputEventKey:
@@ -26,6 +28,9 @@ func change_pressed_e_key_image() -> void:
 	texture_rect.set_texture(e_key_texture)
 
 func player_doesnt_have_key() -> void:
+	if player:
+		player.send_thinking("need_key")
+	
 	pass
 	await get_tree().create_timer(1.0).timeout
 	pass
@@ -45,6 +50,8 @@ func open_chest() -> void:
 func _on_body_entered(body):
 	if body.get_name() == "Player":
 		player_can_interact = true
+		
+		player = body
 		if(!is_open):
 			texture_rect.visible = true
 

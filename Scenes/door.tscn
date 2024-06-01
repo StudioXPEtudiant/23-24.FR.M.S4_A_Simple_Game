@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://c74lu8pcxf3c3"]
+[gd_scene load_steps=9 format=3 uid="uid://c74lu8pcxf3c3"]
 
 [ext_resource type="Script" path="res://Scenes/door.gd" id="1_2ed06"]
-[ext_resource type="Texture2D" uid="uid://bue0grbxn4ahk" path="res://Imports/Sprites/DoorClosePH.png" id="1_3smda"]
-[ext_resource type="Texture2D" uid="uid://2ef1bie6v5fd" path="res://Imports/Sprites/DoorOpenPH.png" id="2_pq1w6"]
+[ext_resource type="Texture2D" uid="uid://c51anrvb03arp" path="res://TilePalette/Isaac/Side Wall/porte_nucleaire_1.png" id="2_l3qg0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hm8h"]
 size = Vector2(32, 32)
@@ -10,11 +9,19 @@ size = Vector2(32, 32)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_auno1"]
 polygon = PackedVector2Array(-4, -34, -4, 30, 8, 30, 8, -34)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvbeh"]
+atlas = ExtResource("2_l3qg0")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slbqp"]
+atlas = ExtResource("2_l3qg0")
+region = Rect2(0, 16, 16, 16)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_65b2k"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_3smda")
+"texture": SubResource("AtlasTexture_xvbeh")
 }],
 "loop": true,
 "name": &"close",
@@ -22,7 +29,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_pq1w6")
+"texture": SubResource("AtlasTexture_slbqp")
 }],
 "loop": true,
 "name": &"open",
@@ -43,11 +50,15 @@ collision_layer = 2
 shape = SubResource("RectangleShape2D_0hm8h")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="StaticBody2D/CloseDoor"]
-position = Vector2(8, 2)
+visible = false
+position = Vector2(6, 2)
 occluder = SubResource("OccluderPolygon2D_auno1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
 texture_filter = 1
+position = Vector2(32, 0)
+scale = Vector2(2.125, 2)
 sprite_frames = SubResource("SpriteFrames_65b2k")
 animation = &"close"
 

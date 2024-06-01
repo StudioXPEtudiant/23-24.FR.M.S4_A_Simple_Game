@@ -12,7 +12,10 @@ func _process(delta):
 	pass
 
 func _ready():
-	$CanvasModulate.switchLight()
+	$CanvasModulate.visible = true
+	
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+
 
 func add_key_inventory(key_number):
 	if(key_number == 1):
@@ -47,9 +50,3 @@ func check_keys_in_inventory(key_number) -> bool:
 func remove_key(key_number) -> void:
 	if key_number == 1:
 		player_have_key_1 = false
-
-
-
-
-func _on_lever_lever_activation():
-	print ("ok")

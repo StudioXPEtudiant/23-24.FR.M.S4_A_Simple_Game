@@ -30,6 +30,7 @@ animations = [{
 [node name="Lever" type="Area2D"]
 position = Vector2(-1, 0)
 scale = Vector2(0.25, 0.25)
+collision_layer = 2
 script = ExtResource("1_iy6ej")
 lever_tag = 1
 metadata/_edit_group_ = true
