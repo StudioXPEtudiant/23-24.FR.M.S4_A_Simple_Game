@@ -5,6 +5,7 @@ extends Area2D
 @export var e_pressed_key_texture: Texture 
 var open_label_base_text = "E to open"
 
+@export var item: PackedScene
 @export var after_open_animation_scene: PackedScene
 
 var player_can_interact = false
@@ -46,6 +47,8 @@ func open_chest() -> void:
 	
 	texture_rect.visible = false
 	is_open = true
+	
+	$item_spawner.summon_item()
 
 func _on_body_entered(body):
 	if body.get_name() == "Player":

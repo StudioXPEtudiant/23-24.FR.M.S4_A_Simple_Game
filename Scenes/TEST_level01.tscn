@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://bqwce73l0l4m4"]
+[gd_scene load_steps=104 format=3 uid="uid://bqwce73l0l4m4"]
 
 [ext_resource type="Script" path="res://Scripts/TEST_level01.gd" id="1_wldnw"]
 [ext_resource type="Texture2D" uid="uid://cp0aioukloj1b" path="res://TilePalette/CosmicLilac_Tiles.png" id="2_082fy"]
@@ -31,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://v3c7d51i8jwk" path="res://Imports/UI_Icons/Button Itch Pack/Button Itch Pack/Restart/Restart1.png" id="27_su6as"]
 [ext_resource type="Texture2D" uid="uid://xhl74ymjumb2" path="res://Imports/UI_Icons/Button Itch Pack/Button Itch Pack/Restart/Restart5.png" id="28_e304r"]
 [ext_resource type="Texture2D" uid="uid://gtt5isrr1uno" path="res://Imports/UI_Icons/Button Itch Pack/Button Itch Pack/Restart/Restart3.png" id="29_kipi3"]
+[ext_resource type="PackedScene" uid="uid://daqsi2ln5frsk" path="res://Scenes/collectables/health_potion.tscn" id="32_k72d0"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vaqyo"]
 polygon = PackedVector2Array(1.375, 8, 8, 2.625, 8, -1.875, -2.625, 8)
@@ -1028,6 +1029,17 @@ metadata/_edit_group_ = true
 [node name="discord_manager" type="Node" parent="."]
 script = ExtResource("9_4g4a4")
 
+[node name="potion_manager" type="Node" parent="."]
+
+[node name="HealthPotion" parent="potion_manager" instance=ExtResource("32_k72d0")]
+position = Vector2(819, 370)
+
+[node name="HealthPotion2" parent="potion_manager" instance=ExtResource("32_k72d0")]
+position = Vector2(713, 292)
+
+[node name="HealthPotion3" parent="potion_manager" instance=ExtResource("32_k72d0")]
+position = Vector2(802, 104)
+
 [node name="cameras_manager" type="Node2D" parent="."]
 script = ExtResource("13_nbed7")
 
@@ -1176,7 +1188,7 @@ texture_filter = 1
 position = Vector2(40, 36)
 scale = Vector2(6.065, 6.065)
 sprite_frames = SubResource("SpriteFrames_oowb1")
-animation = &"refull_life"
+animation = &"S6"
 
 [node name="replay_button" type="TextureButton" parent="HUD/LifePanel"]
 visible = false

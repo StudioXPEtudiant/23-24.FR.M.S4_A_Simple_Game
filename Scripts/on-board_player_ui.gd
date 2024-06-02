@@ -9,3 +9,6 @@ func need_key_bubble():
 
 func barbed_message_bubble():
 	$bubble_animated.play("barbed_message")
+
+func health_message_bubble():
+	$bubble_animated.play("health_message")
