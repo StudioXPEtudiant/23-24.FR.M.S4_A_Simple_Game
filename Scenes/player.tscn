@@ -632,6 +632,8 @@ sprite_frames = SubResource("SpriteFrames_0n6qb")
 animation = &"barbed_message"
 script = ExtResource("8_xr203")
 
+[connection signal="player_respawn" from="." to="PlayerFlashlight" method="turn_flashlight_on"]
+[connection signal="player_respawn" from="." to="life_system" method="refull_life"]
 [connection signal="ls_die" from="life_system" to="." method="die"]
 [connection signal="ls_die" from="life_system" to="PlayerFlashlight" method="die_light_animation"]
 [connection signal="animation_looped" from="on-board_player_ui/bubble_animated" to="on-board_player_ui/bubble_animated" method="_on_animation_looped"]

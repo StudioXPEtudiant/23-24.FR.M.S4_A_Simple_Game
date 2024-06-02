@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=3 uid="uid://bqwce73l0l4m4"]
+[gd_scene load_steps=87 format=3 uid="uid://bqwce73l0l4m4"]
 
 [ext_resource type="Script" path="res://Scripts/TEST_level01.gd" id="1_wldnw"]
 [ext_resource type="Texture2D" uid="uid://cp0aioukloj1b" path="res://TilePalette/CosmicLilac_Tiles.png" id="2_082fy"]
@@ -28,9 +28,6 @@
 [ext_resource type="Texture2D" uid="uid://c77ho3edy1fu8" path="res://Imports/UI_Icons/Pixel_Hearts_GUI_Pack_v002/hearts.png" id="24_8wx85"]
 [ext_resource type="Script" path="res://Scripts/BloodPanel.gd" id="26_1pctp"]
 [ext_resource type="PackedScene" uid="uid://dn31gd3ahiux1" path="res://Scenes/bloodScreenEffect.tscn" id="26_4hmdn"]
-[ext_resource type="Texture2D" uid="uid://v3c7d51i8jwk" path="res://Imports/UI_Icons/Button Itch Pack/Button Itch Pack/Restart/Restart1.png" id="27_su6as"]
-[ext_resource type="Texture2D" uid="uid://xhl74ymjumb2" path="res://Imports/UI_Icons/Button Itch Pack/Button Itch Pack/Restart/Restart5.png" id="28_e304r"]
-[ext_resource type="Texture2D" uid="uid://gtt5isrr1uno" path="res://Imports/UI_Icons/Button Itch Pack/Button Itch Pack/Restart/Restart3.png" id="29_kipi3"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_vaqyo"]
 polygon = PackedVector2Array(1.375, 8, 8, 2.625, 8, -1.875, -2.625, 8)
@@ -766,58 +763,6 @@ region = Rect2(0, 16, 16, 16)
 atlas = ExtResource("24_8wx85")
 region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qufj5"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(0, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tcm4w"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(16, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d8lxb"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(32, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_t60y7"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(48, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ux8q3"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(64, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_k8yvk"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(80, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g3r72"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(96, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1vulf"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(112, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7of3x"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(128, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wyomg"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(144, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tm6ig"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(160, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v2v7g"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(176, 32, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_12u2c"]
-atlas = ExtResource("24_8wx85")
-region = Rect2(192, 32, 16, 16)
-
 [sub_resource type="SpriteFrames" id="SpriteFrames_oowb1"]
 animations = [{
 "frames": [{
@@ -908,56 +853,12 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ao5gk")
 }, {
-"duration": 5.0,
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ldidx")
 }],
 "loop": true,
 "name": &"die_anim",
 "speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qufj5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tcm4w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d8lxb")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_t60y7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ux8q3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_k8yvk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g3r72")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1vulf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7of3x")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wyomg")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tm6ig")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v2v7g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_12u2c")
-}],
-"loop": true,
-"name": &"refull_life",
-"speed": 10.0
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mqbhj"]
@@ -965,9 +866,6 @@ bg_color = Color(0.6, 0, 0.101961, 0.207843)
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_wldnw")
-
-[node name="PlayerSpawn" type="Node2D" parent="."]
-position = Vector2(974, 354)
 
 [node name="TileMapLevel" type="TileMap" parent="."]
 texture_filter = 1
@@ -1155,9 +1053,6 @@ offset_bottom = 20.0
 grow_vertical = 2
 texture = ExtResource("15_wwwtk")
 
-[node name="tween_target" type="Node2D" parent="HUD/TimePanel"]
-position = Vector2(72, 306)
-
 [node name="LifePanel" type="Panel" parent="HUD"]
 anchors_preset = 1
 anchor_left = 1.0
@@ -1176,20 +1071,7 @@ texture_filter = 1
 position = Vector2(40, 36)
 scale = Vector2(6.065, 6.065)
 sprite_frames = SubResource("SpriteFrames_oowb1")
-animation = &"refull_life"
-
-[node name="replay_button" type="TextureButton" parent="HUD/LifePanel"]
-visible = false
-texture_filter = 1
-layout_mode = 0
-offset_left = -81.0
-offset_top = 9.0
-offset_right = -17.0
-offset_bottom = 25.0
-scale = Vector2(3.91, 3.91)
-texture_normal = ExtResource("27_su6as")
-texture_pressed = ExtResource("28_e304r")
-texture_hover = ExtResource("29_kipi3")
+animation = &"S6"
 
 [node name="BloodPanel" type="Panel" parent="HUD"]
 offset_left = -6.0
@@ -1201,19 +1083,11 @@ script = ExtResource("26_1pctp")
 
 [node name="BloodScreenEffect" parent="HUD/BloodPanel" instance=ExtResource("26_4hmdn")]
 
-[connection signal="player_die" from="Player" to="cursor" method="remove_light"]
 [connection signal="player_die" from="Player" to="HUD/TimePanel" method="_on_player_player_die"]
-[connection signal="player_die" from="Player" to="HUD/LifePanel" method="on_playerd_die"]
-[connection signal="player_respawn" from="Player" to="cursor" method="reset_cursor"]
-[connection signal="player_respawn" from="Player" to="HUD/TimePanel" method="move_back"]
-[connection signal="player_respawn" from="Player" to="HUD/TimePanel" method="restart_counter"]
-[connection signal="player_respawn" from="Player" to="HUD/LifePanel" method="move_back"]
-[connection signal="player_respawn" from="Player" to="HUD/LifePanel" method="respawn_heart_animation"]
 [connection signal="lever_door_ActDea" from="lever_manager" to="door_manager/Door1" method="toogle_door_sys"]
 [connection signal="lever_activation" from="lever_manager/Lever1" to="lever_manager" method="update_lever_state"]
 [connection signal="lever_activation" from="lever_manager/Lever1" to="IsaacEasterEggSpawner" method="_on_lever_1_lever_activation"]
 [connection signal="lever_activation" from="lever_manager/Lever2" to="door_manager/Door1" method="_on_lever_2_lever_activation"]
-[connection signal="pressed" from="HUD/LifePanel/replay_button" to="Player" method="respawn"]
 
 [editable path="cameras_manager/camera_zone_1"]
 [editable path="cameras_manager/camera_zone_2"]

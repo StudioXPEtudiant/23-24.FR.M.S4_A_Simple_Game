@@ -91,5 +91,5 @@ placeholder_text = "Pseudo"
 [node name="cursor" parent="." instance=ExtResource("15_qx4m6")]
 scale = Vector2(5, 5)
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TextureButton" to="." method="get_and_send_player_username"]
+[connection signal="pressed" from="TextureButton" to="." method="_on_button_pressed"]

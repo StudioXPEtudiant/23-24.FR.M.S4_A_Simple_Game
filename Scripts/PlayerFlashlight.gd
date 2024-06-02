@@ -30,3 +30,15 @@ func diminish_light() -> void:
 		print(i)
 		if i > 40:
 			energy = 0
+
+func turn_flashlight_on():
+	var blink_times = 8
+	var blink_delay = 0.15
+	
+	energy = 1
+
+	for i in range(blink_times):
+		visible = !visible
+		await get_tree().create_timer(blink_delay).timeout
+	
+	visible = true # Assurer que la lumière est visible après le clignotement

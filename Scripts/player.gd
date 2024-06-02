@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
 signal player_die
+signal player_respawn
 
+@export var respawn_point: Node2D
 @export var SPEED = 100.0
 
 var can_move = true
@@ -50,3 +52,15 @@ func die():
 	can_move = false
 	
 	player_die.emit()
+
+func respawn():
+	player_respawn.emit()
+	
+	respawn_point = get_parent().get_node("PlayerSpawn")
+	
+	position = respawn_point.position
+	
+	# Attente de la réactivation de la flashlight
+	await get_tree().create_timer(1.7).timeout
+	
+	can_move = true

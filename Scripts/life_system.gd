@@ -27,3 +27,6 @@ func gain_life(amount: int):
 	current_life += amount
 	
 	lifePanel.set_life_ui(current_life, false)
+
+func refull_life():
+	current_life = max_life
