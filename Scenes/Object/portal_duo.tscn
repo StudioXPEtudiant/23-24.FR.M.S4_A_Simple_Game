@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://c2vlhnc7btueu"]
+
+[ext_resource type="Texture2D" uid="uid://c15uniuumoonb" path="res://Imports/Sprites/Portal/portal.png" id="1_5e13r"]
+[ext_resource type="Script" path="res://Scripts/portal_duo.gd" id="1_jo5u6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f17lf"]
+
+[node name="portal_duo" type="Node2D" node_paths=PackedStringArray("portal_1", "portal_2")]
+position = Vector2(28, 0)
+script = ExtResource("1_jo5u6")
+portal_1 = NodePath("Node2D")
+portal_2 = NodePath("Node2D2")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="portal1" type="Area2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/portal1"]
+shape = SubResource("CircleShape2D_f17lf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D/portal1"]
+texture_filter = 1
+texture = ExtResource("1_5e13r")
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="portal2" type="Area2D" parent="Node2D2"]
+position = Vector2(-53, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D2/portal2"]
+shape = SubResource("CircleShape2D_f17lf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2/portal2"]
+texture_filter = 1
+texture = ExtResource("1_5e13r")
+
+[connection signal="body_entered" from="Node2D/portal1" to="." method="tp_to_portal_2"]
+[connection signal="body_entered" from="Node2D2/portal2" to="." method="tp_to_portal_1"]

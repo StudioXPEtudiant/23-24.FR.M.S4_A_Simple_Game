@@ -49,6 +49,8 @@ func send_thinking(thinking: String):
 		$"on-board_player_ui".barbed_message_bubble()
 	if (thinking == "health_message"):
 		$"on-board_player_ui".health_message_bubble()
+	if (thinking == "new_code_value"):
+		$"on-board_player_ui".new_code_value_bubble()
 
 func die():
 	can_move = false

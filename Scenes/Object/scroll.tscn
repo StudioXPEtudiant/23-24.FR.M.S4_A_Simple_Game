@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4oqp4rqphfa"]
+
+[ext_resource type="Script" path="res://Scripts/scroll.gd" id="1_873t5"]
+[ext_resource type="Texture2D" uid="uid://cf5h7vv7exwaj" path="res://Imports/Sprites/ScrollCodeSysteme/1865f7b227205a5a110509d00894c1ce-removebg-preview.png" id="1_dmbtq"]
+[ext_resource type="PackedScene" uid="uid://cnqyk7ykd7g7x" path="res://Scenes/Particles/blue_sphere_explo_particles.tscn" id="2_t55kb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ipagy"]
+radius = 11.0454
+
+[node name="Scroll" type="Area2D"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_873t5")
+particule_animation = ExtResource("2_t55kb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ipagy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.721569, 0.721569, 0.721569, 1)
+texture_filter = 1
+scale = Vector2(0.095, 0.095)
+texture = ExtResource("1_dmbtq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

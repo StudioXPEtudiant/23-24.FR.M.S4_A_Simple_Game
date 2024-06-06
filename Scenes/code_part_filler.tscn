@@ -1,0 +1,48 @@
+[gd_scene load_steps=7 format=3 uid="uid://crd2oo00k2sby"]
+
+[ext_resource type="Script" path="res://Scripts/code_part_filler.gd" id="1_0wnw8"]
+[ext_resource type="FontFile" uid="uid://bvpoiwa6nsm7r" path="res://Imports/Fonts/Kenney Mini Square.ttf" id="1_kqqdy"]
+[ext_resource type="Texture2D" uid="uid://c4fe365av5fkw" path="res://Imports/Control/Keyboard & Mouse/Default/keyboard_arrow_up.png" id="3_s4wjm"]
+[ext_resource type="Texture2D" uid="uid://bdhwtjh856ly7" path="res://Imports/Control/Keyboard & Mouse/Default/keyboard_arrow_up_outline.png" id="4_r80xu"]
+[ext_resource type="Texture2D" uid="uid://xg3mju2heuyg" path="res://Imports/Control/Keyboard & Mouse/Default/keyboard_arrow_down.png" id="5_0d4la"]
+[ext_resource type="Texture2D" uid="uid://dtomdhdvukefv" path="res://Imports/Control/Keyboard & Mouse/Default/keyboard_arrow_down_outline.png" id="6_63s17"]
+
+[node name="code_part_filler" type="Panel"]
+offset_left = 301.0
+offset_top = 112.0
+offset_right = 394.0
+offset_bottom = 236.0
+script = ExtResource("1_0wnw8")
+
+[node name="label_part_filler" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 3.0
+offset_right = 94.0
+offset_bottom = 118.0
+theme_override_fonts/font = ExtResource("1_kqqdy")
+theme_override_font_sizes/font_size = 86
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="up_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = -63.0
+offset_right = 79.0
+offset_bottom = 1.0
+texture_normal = ExtResource("3_s4wjm")
+texture_pressed = ExtResource("4_r80xu")
+
+[node name="down_button" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 123.015
+offset_right = 79.0
+offset_bottom = 187.015
+texture_normal = ExtResource("5_0d4la")
+texture_pressed = ExtResource("6_63s17")
+
+[connection signal="button_down" from="up_button" to="." method="incr_value"]
+[connection signal="button_down" from="down_button" to="." method="deacr_value"]

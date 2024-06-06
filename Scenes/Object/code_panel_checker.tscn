@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c08a8r7i8wtn3"]
+
+[ext_resource type="Script" path="res://Scripts/code_panel_checker.gd" id="1_rcssi"]
+[ext_resource type="Texture2D" uid="uid://bxb2woh51u7jy" path="res://Imports/Sprites/code_panel_checker.png" id="1_vefk0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2c06n"]
+radius = 36.0
+
+[node name="CodePanelChecker" type="Area2D"]
+script = ExtResource("1_rcssi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2c06n")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_vefk0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

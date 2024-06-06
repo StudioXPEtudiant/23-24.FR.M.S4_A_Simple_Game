@@ -48,7 +48,7 @@ func open_chest() -> void:
 	texture_rect.visible = false
 	is_open = true
 	
-	$item_spawner.summon_item()
+	$item_spawner.summon_item() 
 
 func _on_body_entered(body):
 	if body.get_name() == "Player":

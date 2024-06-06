@@ -146,6 +146,7 @@ animations = [{
 
 [node name="blue_sphere_explo_particles" type="AnimatedSprite2D"]
 texture_filter = 1
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_mji8w")
 frame = 7
 frame_progress = 0.69695

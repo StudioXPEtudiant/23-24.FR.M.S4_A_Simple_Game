@@ -12,3 +12,6 @@ func barbed_message_bubble():
 
 func health_message_bubble():
 	$bubble_animated.play("health_message")
+
+func new_code_value_bubble():
+	$bubble_animated.play("new_code_value_message")
