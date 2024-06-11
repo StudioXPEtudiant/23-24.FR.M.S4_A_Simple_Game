@@ -68,3 +68,9 @@ func respawn():
 	await get_tree().create_timer(1.7).timeout
 	
 	can_move = true
+
+func set_can_move_false():
+	can_move = false
+	
+func set_can_move_true():
+	can_move = true

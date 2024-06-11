@@ -1,6 +1,7 @@
 extends Area2D
 
-signal code_panel_asked(value: bool)
+signal show_code_panel()
+signal hide_code_panel()
 
 var player_can_interact = false
 var player_in_panel = false
@@ -18,9 +19,10 @@ func _unhandled_input(event):
 	if(player_can_interact):
 		if event is InputEventKey:
 			if event.pressed and event.keycode == KEY_E:
+				print("E pressed")
 				if(player_in_panel):
 					player_in_panel = false
-					code_panel_asked.emit(true)
+					show_code_panel.emit()
 				else:
 					player_in_panel = true
-					code_panel_asked.emit(false)
+					hide_code_panel.emit()

@@ -9,10 +9,15 @@ var green_color = Color(0, 1, 0, 1)
 var red_color = Color(1, 0, 0, 1)
 
 
-func show_filler(value: bool):
-	if value: Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+func show_filler():
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
-	visible = value
+	visible = true
+
+func hide_filler():
+	visible = false
+	
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func check_code():
 	var number_1 = $Panel/code_part_filler1.get_value()
@@ -32,7 +37,7 @@ func check_code():
 		
 		await get_tree().create_timer(1.2).timeout
 		
-		show_filler(false)
+		hide_filler()
 		
 		correct_code.emit()
 	else:
